@@ -15,6 +15,12 @@ document.getElementById('start-quest').addEventListener('click', function() {
     document.getElementById('riddle-container').classList.remove('hidden');
 });
 
+// Play Music Button
+document.getElementById('play-music').addEventListener('click', function() {
+    document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+    document.getElementById('music').classList.remove('hidden');
+});
+
 document.getElementById('submit1').addEventListener('click', function() {
     const answer = document.getElementById('answer1').value.toLowerCase();
     if (answer.includes('architect') || answer.includes('thena') || answer.includes('you') || answer.includes('my love')) {
@@ -96,3 +102,26 @@ style.textContent = `
     }
 }`;
 document.head.appendChild(style);
+
+// Love Calculator
+document.getElementById('calculate').addEventListener('click', function() {
+    const name1 = document.getElementById('name1').value;
+    const name2 = document.getElementById('name2').value;
+    if (name1 && name2) {
+        const score = Math.floor(Math.random() * 101);
+        document.getElementById('result').textContent = `${name1} and ${name2} are ${score}% compatible! 💕`;
+    } else {
+        document.getElementById('result').textContent = 'Please enter both names!';
+    }
+});
+
+// Floating Hearts
+setInterval(() => {
+    const heart = document.createElement('div');
+    heart.textContent = '💖';
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.animationDelay = Math.random() * 2 + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 1000);
