@@ -5,20 +5,23 @@ document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
-        document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+        document.querySelectorAll('section').forEach(section => {
+            if (section.id !== 'intro') section.classList.add('hidden');
+        });
         document.getElementById(targetId).classList.remove('hidden');
     });
 });
 
 // Quest Logic
 document.getElementById('start-quest').addEventListener('click', function() {
-    document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
     document.getElementById('quest').classList.remove('hidden');
 });
 
 // Play Music Button
 document.getElementById('play-music').addEventListener('click', function() {
-    document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+    document.querySelectorAll('section').forEach(section => {
+        if (section.id !== 'intro') section.classList.add('hidden');
+    });
     document.getElementById('music').classList.remove('hidden');
 });
 
