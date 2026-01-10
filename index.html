@@ -9,6 +9,14 @@
 <body>
     <div class="container">
         <header>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#quest">Quest</a></li>
+                    <li><a href="#game">Game</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </nav>
             <h1>Welcome, My Architect</h1>
             <p>A journey through love and adventure, inspired by our hearts and the realms of D&D.</p>
             <p class="japanese-quote">愛 (Ai) - Love</p>
@@ -45,13 +53,58 @@
                     Time zones may part, but hearts entwine,<br>
                     In every message, our souls align.</p>
                 </div>
-                <div id="final-message" class="hidden">
+                <div id="riddle3" class="hidden">
+                    <h2>The Third Riddle</h2>
+                    <p>What title does my queen hold, the one who inspires my every adventure and fills my heart with magic?</p>
+                    <input type="text" id="answer3" placeholder="Your answer...">
+                    <button id="submit3">Submit</button>
+                </div>
+                <div id="poem3" class="hidden">
+                    <h3>A Final Poem</h3>
+                    <p>My queen, my architect, my eternal flame,<br>
+                    In D&D worlds and real life's game.<br>
+                    From Lebanon to Japan, our love will soar,<br>
+                    Forever yours, now and evermore.</p>
+                </div>
+                <div id="treasure" class="hidden">
                     <h2>The Treasure Revealed</h2>
                     <p>You've conquered the quest, my love! May this site bring you smiles every day, a reminder of our imaginative adventures and the love we share. 💖</p>
                 </div>
             </section>
+            <section id="game" class="hidden">
+                <h2>Mini-Game: Collect the Magic Orbs</h2>
+                <p>Click on the orbs to collect them and reveal a special message!</p>
+                <div id="game-area">
+                    <span class="orb">🔮</span>
+                    <span class="orb">💎</span>
+                    <span class="orb">🗡️</span>
+                    <span class="orb">🏰</span>
+                    <span class="orb">🐉</span>
+                </div>
+                <p id="score">Score: 0</p>
+                <div id="win-message" class="hidden message">
+                    <h3>Congratulations!</h3>
+                    <p>You've collected all the orbs! Here's a special message: My love for you is as endless as the dungeons we explore together. 💖</p>
+                </div>
+            </section>
+            <section id="gallery" class="hidden">
+                <h2>Our Memories Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="https://via.placeholder.com/300x200/ffd700/000?text=Our+First+Adventure" alt="Memory 1">
+                    <img src="https://via.placeholder.com/300x200/8a2be2/fff?text=Starry+Nights" alt="Memory 2">
+                    <img src="https://via.placeholder.com/300x200/4b0082/ffd700?text=Heart+Castles" alt="Memory 3">
+                </div>
+                <div class="poem">
+                    <h3>A Poem for Our Memories</h3>
+                    <p>In every photo, in every star,<br>
+                    I see your face, near or far.<br>
+                    Our love's a tapestry, woven tight,<br>
+                    Illuminated by love's pure light.</p>
+                </div>
+            </section>
         </main>
     </div>
+    <div id="confetti"></div>
     <script src="script.js"></script>
 </body>
 </html>
