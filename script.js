@@ -1,5 +1,12 @@
 // JavaScript for Interactive Website
 
+// Login
+document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Haha baby you don't even need to log in, you already have my heart. This was just a trick. Enjoy the little thing I made for you.. 💖");
+    document.getElementById('login-overlay').style.display = 'none';
+});
+
 // Navigation
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {

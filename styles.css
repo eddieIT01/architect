@@ -225,6 +225,69 @@ section {
 }
 
 
+/* Login Overlay */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-container {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #ffd700;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+}
+
+.login-container h1 {
+    font-family: 'Playfair Display', serif;
+    color: #ffd700;
+    margin-bottom: 30px;
+}
+
+#login-form input {
+    display: block;
+    margin: 15px auto;
+    padding: 12px;
+    border: 1px solid #ffd700;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 250px;
+    border-radius: 5px;
+}
+
+#login-form input::placeholder {
+    color: #ccc;
+}
+
+#login-form button {
+    background: #000;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 400;
+    transition: background 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+#login-form button:hover {
+    background: #ffd700;
+    color: #000;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     h1 {
@@ -244,5 +307,11 @@ section {
     iframe {
         width: 100%;
         height: 250px;
+    }
+    .login-container {
+        padding: 20px;
+    }
+    #login-form input {
+        width: 90%;
     }
 }
