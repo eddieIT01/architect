@@ -12,7 +12,8 @@ document.querySelectorAll('nav a').forEach(link => {
 
 // Quest Logic
 document.getElementById('start-quest').addEventListener('click', function() {
-    document.getElementById('riddle-container').classList.remove('hidden');
+    document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+    document.getElementById('quest').classList.remove('hidden');
 });
 
 // Play Music Button
