@@ -299,10 +299,20 @@ section {
     }
     input {
         width: 90%;
+        font-size: 16px; /* Prevent zoom on iOS */
     }
     nav li {
         display: block;
         margin: 5px 0;
+    }
+    nav a {
+        font-size: 1.2em;
+        padding: 10px;
+        display: block;
+    }
+    button {
+        font-size: 1.1em;
+        padding: 15px 30px;
     }
     iframe {
         width: 100%;
@@ -310,8 +320,21 @@ section {
     }
     .login-container {
         padding: 20px;
+        width: 90%;
+        max-width: none;
     }
     #login-form input {
-        width: 90%;
+        width: 100%;
+        font-size: 16px;
+    }
+    #login-form button {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .orb {
+        font-size: 2em;
     }
 }
