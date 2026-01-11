@@ -30,6 +30,11 @@ document.getElementById('play-music').addEventListener('click', function() {
         if (section.id !== 'intro') section.classList.add('hidden');
     });
     document.getElementById('music').classList.remove('hidden');
+    // Try to play the audio
+    const audio = document.querySelector('audio');
+    if (audio) {
+        audio.play().catch(e => console.log('Autoplay blocked', e));
+    }
 });
 
 document.getElementById('submit1').addEventListener('click', function() {
